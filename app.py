@@ -5,7 +5,8 @@ import jinja2
 app = Flask(__name__)
 
 @app.route("/")
-def index():
+def index(): 
+
     return render_template('index.html')
 
 @app.route("/accident", methods=['POST', 'GET'])
@@ -19,7 +20,7 @@ def accident():
         location = request.form.get('location')
         destination = request.form.get('destination')
 
-        # Fetch location details
+        # Fetch location
         location_details = search_location(location)
         if location_details:
             location_details = location_details[0]  # Use only the first result
