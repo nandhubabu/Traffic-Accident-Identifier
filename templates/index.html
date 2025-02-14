@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}" />
+    <title>TrafficLens - Check Traffic Status</title>
+</head>
+<body>
+    <div id="app">
+        <!-- Search Page -->
+        <div id="search-page" class="page">
+            <nav>
+                <div class="nav-content">
+                    <div class="logo">
+                        <i data-lucide="car"></i>
+                        <span>TrafficLens</span>
+                    </div>
+                </div>
+            </nav>
+            <main>
+                <div class="search-container">
+                    <h1>Check Traffic Status</h1>
+                    <p>Plan your journey with real-time traffic updates and accident details</p>
+                    <form id="search-form" action="/accident" method="POST">
+                        <div class="input-group">
+                            <input type="text" id="current-location" placeholder="Enter current location" name="location" required>
+                            <button type="button" id="get-location">Use My Location</button>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="destination" placeholder="Enter destination" name="destination" required>
+                        </div>
+                        <button type="submit" id="check-route">Check Route</button>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+    <!-- Move the script tag here, before closing the body tag -->
+    <script src="{{ url_for('static', filename='scripts/script.js') }}"></script>
+</body>
+</html>

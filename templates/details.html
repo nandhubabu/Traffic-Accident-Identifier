@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/details.css')}}">
+</head>
+<body>
+    <div id="details-page" class="page hidden">
+        <nav>
+            <div class="details-nav">
+                <button onclick="handleBack()" class="back-button">
+                    <i data-lucide="arrow-left"></i> Back
+                </button>
+            </div>
+        </nav>
+        <main>
+            <div class="details-container">
+                <h1 id="route-title"></h1>
+                <div id="map" style="height: 400px;"></div>
+                <div id="route-details" class="route-section"></div>
+                <div id="traffic-details" class="traffic-section"></div>
+                <h3>Possible Accident Cases</h3>
+                <ul id="accident-cases"></ul>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+
